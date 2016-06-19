@@ -1,3 +1,8 @@
 FROM debian:stable
+
 MAINTAINER Mathias Stelzer <knoppo@rolln.de>
-RUN apt-get update && apt-get install -y openssh-client rsync git
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update
+RUN apt-get install -y openssh-client rsync git
